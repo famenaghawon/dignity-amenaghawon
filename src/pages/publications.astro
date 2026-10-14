@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const papers = [
+  {
+    title: 'Fuel Subsidy Removal in Nigeria: Poor Implementation and the Undesirable Outcome',
+    year: '2024',
+    type: 'Reflective Policy Essay',
+    link: 'https://www.academia.edu/125048056/REFLECTIVE_POLICY_ESSAY_DIGNITY_AIRHUOYUWA_AMENAGHAWON_FUEL_SUBSIDY_REMOVAL_IN_NIGERIA_POOR_IMPLEMENTATION_AND_THE_UNDESIRABLE_OUTCOME'
+  },
+  {
+    title: 'Electoral Reforms and Governance in West Africa',
+    year: '2024',
+    type: 'Policy Essay',
+    link: 'https://www.academia.edu/124431074/Dignity_Amenaghawon_Electoral_Reforms_and_Governance_in_West_Africa'
+  },
+  {
+    title: 'Elections and Their Impact on Democracy and Governance in West Africa',
+    year: '2024',
+    type: 'Policy Essay',
+    link: 'https://www.academia.edu/123958326/'
+  }
+];
+---
+<Layout title="Publications & Research">
+  <div class="max-w-4xl">
+    <h1 class="text-4xl font-bold mb-4">Publications & Research</h1>
+    <p class="text-lg text-slate-600 mb-10">Dignity’s research focuses on governance, policy analysis, and sustainable development.</p>
+    
+    <div class="space-y-6">
+      {papers.map((paper) => (
+        <div class="bg-white p-6 rounded-lg border border-slate-200 shadow-sm">
+          <span class="text-xs font-bold uppercase tracking-wider text-[#0F766E]">{paper.type} | {paper.year}</span>
+          <h2 class="text-xl font-bold mt-2 mb-3">{paper.title}</h2>
+          <a href={paper.link} target="_blank" class="text-slate-600 font-medium hover:text-[#0F766E] hover:underline">Read Paper &rarr;</a>
+        </div>
+      ))}
+    </div>
+    
+    <div class="mt-10 p-4 bg-slate-100 rounded text-sm text-slate-600">
+      <p><strong>Note:</strong> Full text downloads on Academia.edu may require a free account.</p>
+      <p class="mt-1"><a href="https://waeup.academia.edu/AmenaghawonDignity" target="_blank" class="text-[#0F766E] hover:underline">View full author profile on Academia.edu &rarr;</a></p>
+    </div>
+  </div>
+</Layout>

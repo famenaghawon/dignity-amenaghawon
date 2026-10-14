@@ -1,11 +1,21 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
-
-<Layout>
-	<Welcome />
+<Layout title="Home">
+  <section class="py-16 md:py-24">
+    <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6 text-slate-900">
+      Leadership. Policy. Purpose.
+    </h1>
+    <p class="text-xl md:text-2xl text-slate-600 max-w-3xl mb-10 leading-relaxed">
+      A professional platform documenting the leadership journey, policy contributions, public service, and commitment to youth development by Dignity Amenaghawon.
+    </p>
+    <div class="flex gap-4">
+      <a href="/about" class="bg-[#0F766E] text-white px-8 py-3 rounded-md font-medium hover:bg-[#0D5F58] transition">
+        Explore His Work
+      </a>
+      <a href="/publications" class="border border-slate-300 text-slate-700 px-8 py-3 rounded-md font-medium hover:bg-slate-100 transition">
+        Read Publications
+      </a>
+    </div>
+  </section>
 </Layout>
